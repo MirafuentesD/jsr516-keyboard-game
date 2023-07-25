@@ -1,0 +1,80 @@
+#frame {
+    vertical-align: middle;
+    border-radius: 20px;
+    background-color:white;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    height: 15em;
+    display: flex;
+    list-style: none;
+    margin-top: 40px;
+    padding-left: 80px;
+}
+
+.blackKey{
+    border: 1px solid black;
+    display: inline-block;
+    height: 15em;
+    z-index: 2;
+    width: 44px;
+    height: 140px;
+    margin: 0 -22px 0 -22px;
+    border-radius: 0 0 5px 5px;
+    background: linear-gradient(#333, #000);
+    background-color: black;
+
+}
+
+.whiteKey{
+    display: inline-block;
+    height: 15em;
+    height: 230px;
+    width: 70px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    background: linear-gradient(#fff 96%, #eee 4%);
+}
+
+.whiteKeyText{
+    margin-top: 189px;
+    color: black;
+    font-size: 20px;
+}
+
+.blackKeyText{
+    margin-top: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+#nameInput{
+    border: 2px solid black;
+    width: auto;
+    height: 50%;
+    font-size: 30px;
+    padding: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+#fNameInput{
+    border: 2px solid black;
+    padding: 10px;
+
+}
+
+#resultsSection{
+    border: 2px solid green;
+    width: auto;
+    height: 50%;
+    font-size: 30px;
+    padding: 20px;
+    margin : 20px;
+}
+
+#restartButton{
+    padding: 10px;
+    margin-left: 20px;
+}
