@@ -49,6 +49,7 @@ class MusicNote {
         context.textAlign = "center";
         context.textBaseline = "middle";
         context.font = "40px Arial";
+        context.fillStyle="black";
         context.fillText(this.note,this.xpos,this.ypos);
         context.arc(this.xpos,this.ypos,this.radius,0,Math.PI * 2,false);
         context.stroke();
@@ -68,7 +69,7 @@ class MusicNote {
     }
 
     update(){
-        if (this.xpos <= "662"){
+        if (parseInt(this.xpos) + this.radius <= Math.floor(stopBarX)){
             this.draw(context);
         }
         else
@@ -98,6 +99,11 @@ const updateNotes = function () {
             resultsSection.innerText= "Congrats, " + fNnameInput.value +'! You completed the scale';
         }
     }
+    else if ( notes.length > 1 && (parseInt(notes[notes.length-1].xpos) > windowWidth)) {
+        notes = [];
+        gameLost = true;
+        frame.style.display=='';
+    }
     else{
         for (let i = 0; i < notes.length; i++){
             notes[i].update();
@@ -121,6 +127,7 @@ for (let i = 0; i < allKeys.length; i++){
 
 let drawRectangle = function () {
     context.beginPath();
+    context.fillStyle="red";
     context.fillRect(stopBarX, 0, stopBarWidth, windowHeight );
     context.stroke();
     context.closePath();
@@ -153,7 +160,7 @@ document.querySelector('#fNameInput').addEventListener('keypress', function (e) 
         namePrompt.style.display='none';
         welcomeBox.innerText = welcomeBox.innerText + ' ' + fNnameInput.value + '!';
         for (let i = 0; i < scale1.length; i++){
-            var note = new MusicNote(scale1[i], (-150 * i) + 350 ,100,50,"black",2);
+            var note = new MusicNote(scale1[i], (-150 * i) + windowWidth * .45 ,100,50,"black",2);
             note.draw(context);
             notes.push(note);
         } 
@@ -165,6 +172,7 @@ document.querySelector('#restartButton').addEventListener('click', function (e) 
        namePrompt.style.display='';
        fNnameInput.value='';
        welcomeBox.innerText = 'Welcome';
+       gameLost = false;
        updateCircle();
 });
 
