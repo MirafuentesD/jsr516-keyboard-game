@@ -1,7 +1,7 @@
 #frame {
     vertical-align: middle;
     border-radius: 20px;
-    background-color:white;
+    background-color: white;
     margin: auto;
     text-align: center;
     width: 100%;
@@ -12,7 +12,7 @@
     padding-left: 80px;
 }
 
-.blackKey{
+.blackKey {
     border: 1px solid black;
     display: inline-block;
     height: 15em;
@@ -26,7 +26,7 @@
 
 }
 
-.whiteKey{
+.whiteKey {
     display: inline-block;
     height: 15em;
     height: 230px;
@@ -36,19 +36,19 @@
     background: linear-gradient(#fff 96%, #eee 4%);
 }
 
-.whiteKeyText{
+.whiteKeyText {
     margin-top: 189px;
     color: black;
     font-size: 20px;
 }
 
-.blackKeyText{
+.blackKeyText {
     margin-top: 20px;
     color: white;
     font-size: 20px;
 }
 
-#nameInput{
+#nameInput {
     border: 2px solid black;
     width: auto;
     height: 50%;
@@ -59,22 +59,22 @@
     margin-right: 20px;
 }
 
-#fNameInput{
+#fNameInput {
     border: 2px solid black;
     padding: 10px;
 
 }
 
-#resultsSection{
+#resultsSection {
     border: 2px solid green;
     width: auto;
     height: 50%;
     font-size: 30px;
     padding: 20px;
-    margin : 20px;
+    margin: 20px;
 }
 
-#restartButton{
+#restartButton {
     padding: 10px;
     margin-left: 20px;
 }
